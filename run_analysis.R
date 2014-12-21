@@ -28,5 +28,5 @@ tidy_data <- function(x="UCI HAR Dataset") {
         final_means <- aggregate(full_table3[3:68], by=list(full_table3$Subject,full_table3$Activity), mean)
         final_means2 <- rename(final_means, c("Group.2" = "Activity", "Group.1" = "Subject"))
         write.table(full_table3, file="~/UCI HAR Dataset/full_table_means_stds.txt")                       
-        write.table(final_means2, file="~/UCI HAR Dataset/means_tidy_data.txt")
+        write.table(final_means2, file="~/UCI HAR Dataset/means_tidy_data.txt", row.name=FALSE)
 }
