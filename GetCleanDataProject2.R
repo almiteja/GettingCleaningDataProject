@@ -1,6 +1,6 @@
 #Getting and Cleaning Data, Course Project Draft 2
 tidy_data <- function(x="UCI HAR Dataset") {
-        
+        library(plyr)
         test_data<-read.table("~/UCI HAR Dataset/test/X_test.txt") #read data into dfs
         train_data<-read.table("~/UCI HAR Dataset/train/X_train.txt")
         test_subjects<-read.table("~/UCI HAR Dataset/test/subject_test.txt")
